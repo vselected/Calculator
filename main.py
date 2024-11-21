@@ -9,8 +9,16 @@ def calculator():
     print("4. Division (/)")
     print("\n")
 
-    # Get user choice
-    choice = input("Enter the number of the operation you want to perform (1/2/3/4): ")
+    # Check if user choice is valid
+    while True:
+        # Get user choice
+        choice = input("Enter the number of the operation you want to perform (1/2/3/4): ")
+
+        if choice not in ["1", "2", "3", "4"]:
+            print("Invalid choice. Please select a valid option.")
+        else:
+            return choice
+
 
 
 # Run Calculator
