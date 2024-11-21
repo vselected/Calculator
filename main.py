@@ -9,7 +9,6 @@ def calculator():
     print("4. Division (/)")
     print("\n")
 
-
     while True:
         # Get user operator choice
         choice = input("Enter the number of the operation you want to perform (1/2/3/4): ")
@@ -28,7 +27,21 @@ def calculator():
             continue
 
         # Perform the chosen operation
-
+        if choice == '1':
+            result = num1 + num2
+            print(f"The result of {num1} + {num2} is: {result}")
+        elif choice == '2':
+            result = num1 - num2
+            print(f"The result of {num1} - {num2} is: {result}")
+        elif choice == '3':
+            result = num1 * num2
+            print(f"The result of {num1} * {num2} is: {result}")
+        elif choice == '4':
+            if num2 == 0:
+                print("Error: Division by zero is not allowed.")
+            else:
+                result = num1 / num2
+                print(f"The result of {num1} / {num2} is: {result}")
 
         # Ask if the user wants to perform another calculation
         next_calculation = input("Do you want to perform another calculation? (yes/no): ").lower()
