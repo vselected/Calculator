@@ -27,10 +27,14 @@ def calculator():
             print("Invalid input. Please enter numeric values.")
             continue
 
+        # Perform the chosen operation
 
 
-
-
+        # Ask if the user wants to perform another calculation
+        next_calculation = input("Do you want to perform another calculation? (yes/no): ").lower()
+        if next_calculation != 'yes':
+            print("Thank you for using the calculator! Goodbye!")
+            break
 
 # Run Calculator
 calculator()
